@@ -1,0 +1,29 @@
+﻿<Window x:Class="BluetoothDevicesChecker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BluetoothDevicesChecker"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <!--列の定義-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="1" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <!--左の列にボタンを配置-->
+        <ScrollViewer Grid.Column="0" VerticalScrollBarVisibility="Auto">
+            <StackPanel x:Name="ButtonPanel" Orientation="Vertical"/>
+        </ScrollViewer>
+
+        <!--中央の列に区切り線を配置-->
+        <Border Grid.Column="1" Background="Black" Width="1"/>
+
+        <!--右の列にテキストブロックを配置-->
+        <StackPanel x:Name="BluetoothDeiceInfoPanel" Grid.Column="2" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top">
+        </StackPanel>
+    </Grid>
+</Window>
